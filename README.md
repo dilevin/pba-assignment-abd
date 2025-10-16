@@ -73,7 +73,7 @@ python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_
 3. This [Google Drive link](https://drive.google.com/drive/folders/1Vyp4Fk77LIB_EQfGQwTnWpm0KO5Hemai?usp=sharing) contains output from the solution code that you can use to validate your code. The output consists of **USD (Universal Scene Description)** files which contain simulated results. These can be played back in any USD viewer. I use [Blender](https://www.blender.org/). You can output your own simulations as USD files, load both files in blender and examine the simulations side-by-side.
 
 ## Background and Resources
-Affine body dynamics was introduced to graphics in this [paper](https://dannykaufman.io/projects/ABD/ABD.pdf) by Lei Lan. The online physics-based animation text [book](https://phys-sim-book.github.io/lec25.3-affine_body_dynamics.html) by Li and colleagues as a good overview of the technique. Penalty springs for contact have a long history in simulation. In this assignment we are using the formulation described in in this [paper](https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf)
+Affine body dynamics was introduced to graphics in this [paper](https://dannykaufman.io/projects/ABD/ABD.pdf) by Lei Lan. The [online physics-based animation text book](https://phys-sim-book.github.io/lec25.3-affine_body_dynamics.html) by Li and colleagues as a good overview of the technique. Penalty springs for contact have a long history in simulation. In this assignment we are using the formulation described in in this [paper](https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf)
 
 This assignment draws on previous lectures on [Newton's Method](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/03-from_energy_to_motion.pdf), [Affine Body Dynamics](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/04-rigid-and-affine-bodies.pdf) and [Contact Handling](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/05-affine-bodies-contact.pdf). 
 
@@ -149,4 +149,4 @@ You are allowed to use SymPy for computing formulas for integrals, derivatives a
 We will collect and grade the assignment using [MarkUs](https://markus.teach.cs.toronto.edu/markus/courses/109)
 
 ## Late Penalty
-The late penalty is the same as for the course, specified on the main github page.
+The late penalty is the same as for the course, specified on the [main github page](https://github.com/dilevin/CSC417-physics-based-animation).
