@@ -72,11 +72,15 @@ python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_
 ## Background and Resources
 Affine body dynamics was introduced to graphics in this [paper](https://dannykaufman.io/projects/ABD/ABD.pdf) by Lei Lan. The online physics-based animation text [book](https://phys-sim-book.github.io/lec25.3-affine_body_dynamics.html) by Li and colleagues as a good overview of the technique. Penalty springs for contact have a long history in simulation. In this assignment we are using the formulation described in in this [paper](https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf)
 
-## Affine-Body Dynamics
+## Affine-Body Kinematics
 
-<img width="256" alt="image" src="https://github.com/user-attachments/assets/d552a86a-0772-4e72-9dae-efe904600843" />
+Affine Bodies are a substitute for Rigid Body mechanics, useful when simulating stiff, effectively rigid objects. The key change is to replace a rigid kinematic map, represented by a rotation and a translation with an affine transformation, represented by a linear transformation and a translation:
+<img width="256"  alt="image" src="https://github.com/user-attachments/assets/cff9a281-4d4e-404f-85e6-5e42b194bbdf" />
 
-### Kinematics
+Flattening transformation $Q(t)$ to a $12\times 1$ vector $\mathbf{q}(t)$ allows us to rewrite the kinematic equation above as 
+<img width="256"  alt="image" src="https://github.com/user-attachments/assets/fec22d67-b41b-442f-b918-ddb3c9688d77" /> where $J(\mathbf{X})$ is a $3\times 12$ matrix called the kinematic Jacobian. That matrix has the following form (which maintains equivalence with the matrix-valued map):
+
+<img width="512" height="501" alt="image" src="https://github.com/user-attachments/assets/09a7087e-33d6-4f97-b0be-dca3040ff1b8" />
 
 ### Kinetic Energy
 
