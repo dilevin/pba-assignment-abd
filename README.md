@@ -72,7 +72,7 @@ python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_
 ## Background and Resources
 Affine body dynamics was introduced to graphics in this [paper](https://dannykaufman.io/projects/ABD/ABD.pdf) by Lei Lan. The online physics-based animation text [book](https://phys-sim-book.github.io/lec25.3-affine_body_dynamics.html) by Li and colleagues as a good overview of the technique. Penalty springs for contact have a long history in simulation. In this assignment we are using the formulation described in in this [paper](https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf)
 
-This assignment draws on previous lectures on [Newton's Method](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/03-from_energy_to_motion.pdf), [Affine Body Dynamics](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/04-rigid-and-affine-bodies.pdf) and [Contact Handling](05-affine-bodies-contact.pdf). 
+This assignment draws on previous lectures on [Newton's Method](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/03-from_energy_to_motion.pdf), [Affine Body Dynamics](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/04-rigid-and-affine-bodies.pdf) and [Contact Handling](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/05-affine-bodies-contact.pdf). 
 
 ## Affine-Body Kinematics
 
