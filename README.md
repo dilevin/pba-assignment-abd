@@ -74,7 +74,7 @@ Affine body dynamics was introduced to graphics in this [paper](https://dannykau
 
 ## Affine-Body Dynamics
 
-<img width="564" height="570" alt="image" src="https://github.com/user-attachments/assets/d552a86a-0772-4e72-9dae-efe904600843" />
+<img width="256" alt="image" src="https://github.com/user-attachments/assets/d552a86a-0772-4e72-9dae-efe904600843" />
 
 ### Kinematics
 
