@@ -85,7 +85,7 @@ Affine Bodies are a substitute for Rigid Body mechanics, useful when simulating 
 
 Flattening transformation $Q(t)$ to a $12\times 1$ vector $\mathbf{q}(t)$ allows us to rewrite the kinematic equation above as 
 
-<img width="256"alt="image" src="https://github.com/user-attachments/assets/db988725-38bb-470d-a5e2-cbd4274df5ea" />
+<img width="256" alt="image" src="https://github.com/user-attachments/assets/db988725-38bb-470d-a5e2-cbd4274df5ea" />
 
 where $J(\mathbf{X})$ is a $3\times 12$ matrix called the kinematic Jacobian. That matrix has the following form (which maintains equivalence with the matrix-valued map):
 
