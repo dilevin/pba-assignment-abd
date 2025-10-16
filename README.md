@@ -99,8 +99,20 @@ The mass matrix $M$ consists of volume integrals of second-order monomials. This
 The surface integral is evaluated as a sum over triangle integrals. Each triangle integral can be performed using (barycentric integration)[https://en.wikipedia.org/wiki/Barycentric_coordinate_system]
 
 ### Potential Energy 
+Unlike a true rigid body representation, affine bodies can still deform without additional constraints. To maintain rigid deformations in an affine simulation, we introduce an isometric potential energy which penalizes non rigid deformations. The simplest form of such an energy is the following
+
+<img width="256"  alt="image" src="https://github.com/user-attachments/assets/a2e1b46a-db3e-448b-b1c3-b9b7b4808d16" />,
+
+where $F\in\mathcal{R}^{3\times 3}$ is the deformation gradient of the affine kinematic map, $\kappa$ is a scalar material stiffness (**in this assignment set to $1e8$**)
+
+You should be able to convince yourself that the deformation gradient for an affine body is constant for the entire object and so is the potential energy leading to the simple integration formula
+
+<img width="256" alt="image" src="https://github.com/user-attachments/assets/4097bee1-aa7f-421b-80e9-dde961543e6f" />
 
 ## Contact Resolution using Penalty Springs
+
+The second part of this assignment involves implementing contact resolution using penalty springs. Penalty springs are springs that push contacting objects apart if, and only if they are in contact. In this assignment the collision detection algorithm (the part of the simulation that checks if two objects are in contact) has been implemented for you. You are responsible for implementing the penalty spring energy, gradient and hessian for active contacts.
+
 
 ## Backward Euler for Implicit-Integration
 
