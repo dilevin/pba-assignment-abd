@@ -93,6 +93,7 @@ python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_
 2. Next debug cube_floor.py which uses contact forces but only between too objects. Finally move on to more complicated examples.
 3. The examples in this assignment will run more slowly then the previous assignment due to collision detection overhead. You will notice the simulation slow down once objects come into contact. This is normal. 
 4. If you are using Visual Studio Code or Cursor, use the [interactive debugger](https://code.visualstudio.com/docs/python/debugging) and python debugging console.
+5. There is a new "Step" button in the interface which advances the simulation by a single time step.
    
 ## Admissable Code and Libraries
 You are allowed to use SymPy for computing formulas for integrals, derivatives and gradients. You are allowed to use any functions in the warp and warp.sparse packages. You ARE NOT allowed to use code from other warp packages like warp.fem. You are not allowed to use any of warps specialized spatial data structures for storing meshes, volumes or doing spatial subdivision. You cannot use code from any other external simulation library.  
