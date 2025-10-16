@@ -113,6 +113,10 @@ You should be able to convince yourself that the deformation gradient for an aff
 
 The second part of this assignment involves implementing contact resolution using penalty springs. Penalty springs are springs that push contacting objects apart if, and only if they are in contact. In this assignment the collision detection algorithm (the part of the simulation that checks if two objects are in contact) has been implemented for you. You are responsible for implementing the penalty spring energy, gradient and hessian for active contacts.
 
+The penalty spring energy is "one-sided" in the sense the energy is $0$ when objects are not interpenetrating and increases quadratically as intepenetration increases. In the assignment this energy is only processed for active contacts, triangle-vertex contacts at which intepenetration is already occuring. This means you can ignore the $max$ operation in your implementations.
+
+<img width="512" alt="image" src="https://github.com/user-attachments/assets/f6da7a7f-b2e6-42b8-ae19-7550f11cf931" />
+
 
 ## Backward Euler for Implicit-Integration
 
