@@ -72,6 +72,8 @@ python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_
 ## Background and Resources
 Affine body dynamics was introduced to graphics in this [paper](https://dannykaufman.io/projects/ABD/ABD.pdf) by Lei Lan. The online physics-based animation text [book](https://phys-sim-book.github.io/lec25.3-affine_body_dynamics.html) by Li and colleagues as a good overview of the technique. Penalty springs for contact have a long history in simulation. In this assignment we are using the formulation described in in this [paper](https://graphics.cs.utah.edu/research/projects/vbd/vbd-siggraph2024.pdf)
 
+This assignment draws on previous lectures on [Newton's Method]([lectures/03-](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/03-from_energy_to_motion.pdf), [Affine Body Dynamics](https://github.com/dilevin/CSC417-physics-based-animation/blob/master/lectures/04-rigid-and-affine-bodies.pdf) and [Contact Handling](05-affine-bodies-contact.pdf). 
+
 ## Affine-Body Kinematics
 
 Affine Bodies are a substitute for Rigid Body mechanics, useful when simulating stiff, effectively rigid objects. The key change is to replace a rigid kinematic map, represented by a rotation and a translation with an affine transformation, represented by a linear transformation and a translation:
@@ -119,8 +121,15 @@ The penalty spring energy is "one-sided" in the sense the energy is $0$ when obj
 
 
 ## Backward Euler for Implicit-Integration
+You will implement Backward Euler time integration to time step the affine body system with contact. Backward Euler proceeds by minimizing the following energy using Newton's Method 
 
-## Newton's Method 
+<img width="512"  alt="image" src="https://github.com/user-attachments/assets/c21873d9-c9ef-4c37-8aa5-9028183127b0" />
+
+Newton's method proceeds by iteratively evaluating the Hessian and Gradient of the above energy, computing the Newton search direction and then updating the current configuration variables for all objects in the simulation. 
+
+<img width="512" alt="image" src="https://github.com/user-attachments/assets/e11433ba-2372-4014-aabd-2286b9a6ccef" />
+
+In order to choose an approriate step-size, $\alpha$ you will need to implement backtracking line search to satisfy the sufficient decrease condition. Due to the stiff (re quickly increasing) energies present in contacting simulation of this kind, your simulation is likely to fail without a proper line search. Practically it is important to limit the maximum numer of line search iterations (in this assignment we set the max to 5) in order to prevent prohibitvely long simulation times.
 
 ## Some Debugging Hints
 1. Start by implementing the transform_mesh method. This will cause scenes to be rendered correctly at startup and allow meshes to move during simulation.
