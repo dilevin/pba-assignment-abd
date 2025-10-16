@@ -1,6 +1,6 @@
 # Physics-Based Animation: Affine Body Dynamics with Penalty Spring Contact
 In this assignment you will learn to implement affine body dynamics with penalty springs for simulating stiff objects in contact. 
-![output](https://github.com/user-attachments/assets/432b7c34-eb58-44ab-811c-223f3004b49f **Rendered assignment output played back at high-speed**)
+![output](https://github.com/user-attachments/assets/432b7c34-eb58-44ab-811c-223f3004b49f)
 
 
 
