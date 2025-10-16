@@ -68,3 +68,37 @@ python main.py --scene=tests/{SCENE_PYTHON_FILE}.py --usd_output={FULL_PATH_AND_
 1. You are responsible for implementing all functions found in the [assignments](./assignment) subdirectory.
 2. The [tests](./tests) subdirectory contains the scenes, specified as python files,  we will validate your code against.
 3. This [Google Drive link](https://drive.google.com/drive/folders/1Vyp4Fk77LIB_EQfGQwTnWpm0KO5Hemai?usp=sharing) contains output from the solution code that you can use to validate your code. The output consists of **USD (Universal Scene Description)** files which contain simulated results. These can be played back in any USD viewer. I use [Blender](https://www.blender.org/). You can output your own simulations as USD files, load both files in blender and examine the simulations side-by-side.
+
+## Background
+
+## Resources
+
+## Affine-Body Dynamics
+
+### Kinematics
+
+### Kinetic Energy
+
+### Potential Energy 
+
+## Contact Resolution using Penalty Springs
+
+## Backward Euler for Implicit-Integration
+
+## Newton's Method 
+
+## Some Debugging Hints
+1. Start by implementing the transform_mesh method. This will cause scenes to be rendered correctly at startup and allow meshes to move during simulation.
+1. Next work on the cube_compress.py example which doesn't require any contact forces. 
+2. Next debug cube_floor.py which uses contact forces but only between too objects. Finally move on to more complicated examples.
+3. The examples in this assignment will run more slowly then the previous assignment due to collision detection overhead. You will notice the simulation slow down once objects come into contact. This is normal. 
+4. If you are using Visual Studio Code or Cursor, use the [interactive debugger](https://code.visualstudio.com/docs/python/debugging) and python debugging console.
+   
+## Admissable Code and Libraries
+You are allowed to use SymPy for computing formulas for integrals, derivatives and gradients. You are allowed to use any functions in the warp and warp.sparse packages. You ARE NOT allowed to use code from other warp packages like warp.fem. You are not allowed to use any of warps specialized spatial data structures for storing meshes, volumes or doing spatial subdivision. You cannot use code from any other external simulation library.  
+
+## Hand-In
+We will collect and grade the assignment using [MarkUs](https://markus.teach.cs.toronto.edu/markus/courses/109)
+
+## Late Penalty
+The late penalty is the same as for the course, specified on the main github page.
