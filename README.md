@@ -75,16 +75,28 @@ Affine body dynamics was introduced to graphics in this [paper](https://dannykau
 ## Affine-Body Kinematics
 
 Affine Bodies are a substitute for Rigid Body mechanics, useful when simulating stiff, effectively rigid objects. The key change is to replace a rigid kinematic map, represented by a rotation and a translation with an affine transformation, represented by a linear transformation and a translation:
+
 <img width="256"  alt="image" src="https://github.com/user-attachments/assets/cff9a281-4d4e-404f-85e6-5e42b194bbdf" />
 
 Flattening transformation $Q(t)$ to a $12\times 1$ vector $\mathbf{q}(t)$ allows us to rewrite the kinematic equation above as 
-<img width="256" height="96" alt="image" src="https://github.com/user-attachments/assets/db988725-38bb-470d-a5e2-cbd4274df5ea" />
+
+<img width="256"alt="image" src="https://github.com/user-attachments/assets/db988725-38bb-470d-a5e2-cbd4274df5ea" />
 
 where $J(\mathbf{X})$ is a $3\times 12$ matrix called the kinematic Jacobian. That matrix has the following form (which maintains equivalence with the matrix-valued map):
 
-<img width="512" height="501" alt="image" src="https://github.com/user-attachments/assets/09a7087e-33d6-4f97-b0be-dca3040ff1b8" />
+<img width="512"  alt="image" src="https://github.com/user-attachments/assets/09a7087e-33d6-4f97-b0be-dca3040ff1b8" />
 
 ### Kinetic Energy
+
+The kinetic energy of an affine body can be defined using the generalized velocity $\dot{\mathbf{q}}$ as
+
+<img width="256" alt="image" src="https://github.com/user-attachments/assets/95d5b3eb-3edc-47ee-8e2f-7d333e9b0617" />
+
+The mass matrix $M$ consists of volume integrals of second-order monomials. This integral can be converted to a surface integral via the divergence theorem for evaluation using only an input triangle mesh. 
+
+<img width="256"  alt="image" src="https://github.com/user-attachments/assets/f6dbe819-f47b-4034-944a-d1ac1495cfb2" />
+
+The surface integral is evaluated as a sum over triangle integrals. Each triangle integral can be performed using (barycentric integration)[https://en.wikipedia.org/wiki/Barycentric_coordinate_system]
 
 ### Potential Energy 
 
