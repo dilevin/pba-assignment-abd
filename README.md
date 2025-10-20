@@ -137,17 +137,13 @@ In order to choose an approriate step-size, $\alpha$ you will need to implement 
 ### Adding fixed constraints to Newton's Method
 Fixing degrees of freedom (DOFs) in Newton’s Method can be accomplished by projecting them out of the solve, i.e., by guaranteeing that the update vector $\mathbf{d}$ is always zero for the pinned or fixed entries in $\mathbf{q}$.
 
-At first glance, it might seem reasonable to simply zero out the corresponding entries in $\mathbf{d}$ after computing it. However, this approach ignores the physical coupling between the fixed and free DOFs: the solver would not correctly account for how fixed constraints influence the rest of the system.
-
-Instead, we solve for a reduced Newton step as follows.  
-Let $P$ be a projection (or selection) matrix such that  
+At first glance, it might seem reasonable to simply zero out the corresponding entries in $\mathbf{d}$ after computing it. However, this approach ignores the physical coupling between the fixed and free DOFs: the solver would not correctly account for how fixed constraints influence the rest of the system. Instead, we solve for a reduced Newton step as follows. Let $P$ be a projection (or selection) matrix such that  
 
 $$
 P\mathbf{d} = \tilde{\mathbf{d}},
 $$
 
-where $\tilde{\mathbf{d}} \in \mathbb{R}^{n-f}$ contains only the free DOFs (with $n$ total and $f$ fixed).  
-Because $P$ selects the non-fixed components, we can also write  
+where $\tilde{\mathbf{d}} \in \mathbb{R}^{n-f}$ contains only the free DOFs (with $n$ total and $f$ fixed). Because $P$ selects the non-fixed components, we can also write  
 
 $$
 \mathbf{d} = P^T \tilde{\mathbf{d}},
@@ -161,8 +157,7 @@ $$
 \tilde{H} = P H P^T, \quad \tilde{\mathbf{g}} = P \mathbf{g},
 $$
 
-where $H$ and $\mathbf{g}$ are the Hessian and gradient of the unconstrained energy.  
-Using these reduced quantities in the Newton iteration yields a solver that automatically respects the prescribed fixed constraints without modifying the physics of the underlying system.
+where $H$ and $\mathbf{g}$ are the Hessian and gradient of the unconstrained energy. Using these reduced quantities in the Newton iteration yields a solver that automatically respects the prescribed fixed constraints without modifying the physics of the underlying system.
 
 
 ## Some Debugging Hints
