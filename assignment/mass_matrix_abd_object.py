@@ -32,6 +32,9 @@ Triangle Processing:
     - v0 = vertices[3*tid]
     - v1 = vertices[3*tid+1] 
     - v2 = vertices[3*tid+2]
+    All triangles use counter clockwise winding to define the outside of the the object and the outward facing surface normal.
+    All vertices are stored in counter clockwise order (i.e moving from v0 to v1 to v2 moves around the triangle in the counter clockwwise direction when viewed from the outside of the object)
+
 
 The mass matrix contributions are accumulated atomically across all triangles
 to compute the total mass matrix for the object.
