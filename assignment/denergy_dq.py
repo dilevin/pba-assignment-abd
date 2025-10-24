@@ -6,7 +6,7 @@ parameters q for each object in the simulation. The elastic energy is based on t
 Green strain tensor and measures deformation from the rest configuration.
 
 The elastic energy formula is:
-    Energy = k*||F'F-I||^2_F
+    Energy = 0.5*k*||F'F-I||^2_F
 where:
     F is the deformation gradient matrix (3x3)
     k is the elastic stiffness constant (1e8)
