@@ -5,10 +5,9 @@ This module computes the gradient of elastic energy with respect to the configur
 parameters q for each object in the simulation. The elastic energy is based on the
 Green strain tensor and measures deformation from the rest configuration.
 
-The elastic energy function is:
-    E = (k/2) * tr(E²)
+The elastic energy formula is:
+    Energy = k*||F'F-I||^2_F
 where:
-    E = (1/2) * (F^T * F - I) is the Green strain tensor
     F is the deformation gradient matrix (3x3)
     k is the elastic stiffness constant (1e8)
 
