@@ -6,12 +6,11 @@ The elastic energy is based on the Green strain tensor and measures the amount
 of deformation from the rest configuration.
 
 The elastic energy formula is:
-    Energy = (k/2) * tr(E²)
+    Energy = k*||F'F-I||^2_F
 where:
-    E = (1/2) * (F^T * F - I) is the Green strain tensor
     F is the deformation gradient matrix (3x3)
     k is the elastic stiffness constant (1e8)
-    tr(E²) is the trace of the squared strain tensor
+    
 
 The Green strain tensor E measures the difference between the current configuration
 and the rest configuration. 
