@@ -6,10 +6,9 @@ with respect to the configuration parameters q for each object. The Hessian
 matrix is essential for Newton's method optimization and provides information
 about the curvature of the energy landscape.
 
-The elastic energy function is:
-    E = (k/2) * tr(E²)
+The elastic energy formula is:
+    Energy = k*||F'F-I||^2_F
 where:
-    E = (1/2) * (F^T * F - I) is the Green strain tensor
     F is the deformation gradient matrix (3x3)
     k is the elastic stiffness constant (1e8)
 
